@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import 'leaflet/dist/leaflet.css';
+
+
+/* Responsive Viewport Guard for 360px mobile screens */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Custom horizontal scroll bar styling for mobile tables */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}

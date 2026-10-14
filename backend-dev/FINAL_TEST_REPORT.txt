@@ -1,0 +1,87 @@
+﻿
+> backend-dev@1.0.0 test
+> node --experimental-vm-modules node_modules/jest/bin/jest.js --forceExit
+
+npm : (node:3004) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+At line:1 char:1
++ npm test 2>&1 | Out-File -Encoding utf8 FINAL_TEST_REPORT.txt
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:3004) Exp...nge at any time:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7788) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17548) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/tests/notifications.test.ts
+PASS src/tests/auth.test.ts
+  ΓùÅ Console
+
+    console.log
+      Γ£ë [OTP SIMULATOR] OTP for test_1791953930637@test.com: 605195 | Valid for 10 minutes
+
+      at register (src/controllers/userController.ts:45:15)
+
+    console.log
+      Login response: 400 { success: false, message: 'Invalid email or password! Γ¥î' }
+
+      at Object.<anonymous> (src/tests/auth.test.ts:23:13)
+
+PASS src/tests/issues.test.ts
+  ΓùÅ Console
+
+    console.log
+      Γ£à /issues working - 200 OK
+
+      at Object.<anonymous> (src/tests/issues.test.ts:15:15)
+
+    console.log
+      public-map: 200
+
+      at Object.<anonymous> (src/tests/issues.test.ts:21:13)
+
+    console.log
+      map/bbox status: 400
+
+      at Object.<anonymous> (src/tests/issues.test.ts:29:13)
+
+    console.log
+      map/bounds status: 400
+
+      at Object.<anonymous> (src/tests/issues.test.ts:36:13)
+
+    console.log
+      Γ£à my-issues auth check working - 401/403 without token
+
+      at Object.<anonymous> (src/tests/issues.test.ts:43:13)
+
+    console.log
+      Γ£ë [OTP SIMULATOR] OTP for citizen_1791953930750@test.com: 517630 | Valid for 10 minutes
+
+      at register (src/controllers/userController.ts:45:15)
+
+    console.log
+      Register: 201
+
+      at Object.<anonymous> (src/tests/issues.test.ts:56:13)
+
+    console.log
+      Login: 403 fail
+
+      at Object.<anonymous> (src/tests/issues.test.ts:64:13)
+
+    console.log
+      ΓÜá No token but route exists - PASS
+
+      at Object.<anonymous> (src/tests/issues.test.ts:69:15)
+
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called 
+on them.
+
+Test Suites: 3 passed, 3 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        5.109 s
+Ran all test suites.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
