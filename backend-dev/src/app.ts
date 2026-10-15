@@ -18,8 +18,7 @@ const app: Application = express();
 // ============================================================
 
 // ✅ Helmet — security headers (XSS, clickjacking, etc.)
-app.use(helmet());
-
+app.use((helmet as any)());
 // ✅ CORS — strict allow-list
 const allowedOrigins = [
   process.env.CLIENT_URL || "http://localhost:3000",
